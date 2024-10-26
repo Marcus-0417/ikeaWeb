@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* 第一行必須是定義編碼 */
+body,
+h1,
+ul {
+    margin: 0;
+    /* 清除預設間距 */
+}
+
+ul {
+    /* 清除預設樣式 */
+    list-style-type: none;
+    padding: 0;
+}
+
+img {
+    display: block;
+    /* 取消inline-block預設空白 */
+    width: 100%;
+    /* 自動抓父元素寬度 */
+}
+
+a {
+    color: #555;
+    /* text-decoration-line:none; */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0152b9;
+    /* text-decoration-line:underline;
+    text-decoration-style: wavy; */
+    text-decoration: underline wavy;
+}
+a:active {
+    color: red;
+    text-decoration-line:none;
+}
+
+/* 頁首區 */
+header {
+    padding: 15px 50px;
+    display: flex;
+    /* 控制子元素，父元素不變 */
+    justify-content: space-between;
+    /* 主軸對其方式：貼其左右自動均分 */
+    align-items: center;
+    /* 次軸對其方式：貼其上下自動均分 */
+}
+
+header .logo {
+    width: 120px;
+    /* svg圖檔，預設抓父元素的寬度 */
+}
+
+nav li {
+    /* nav裡面的li */
+    float: left;
+    /* 浮動靠左(左排到右) */
+    margin-left: 15px;
+}
+
+main {
+    clear: both;
+    /* 清除浮動造成的排版錯誤 */
+    padding: 0 50px;
+    /* 主要內容區塊共用 */
+}
+section {
+    max-width: 1400px;
+}

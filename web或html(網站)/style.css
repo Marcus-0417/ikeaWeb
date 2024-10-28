@@ -1,9 +1,12 @@
 @charset "utf-8";
 
 /* 第一行必須是定義編碼 */
-body,
-h1,
-ul {
+
+/* 重置區RESET */
+body{
+    color: var(--text);
+}
+body,h1,ul {
     margin: 0;
     /* 清除預設間距 */
 }
@@ -22,57 +25,82 @@ img {
 }
 
 a {
-    color: #555;
+    color: var(--link);
     /* text-decoration-line:none; */
     text-decoration: none;
 }
 
 a:hover {
-    color: #0152b9;
+    color: var(--primary-1);
     /* text-decoration-line:underline;
     text-decoration-style: wavy; */
     text-decoration: underline wavy;
 }
 
 a:active {
-    color: red;
+    color: var(--active);
     text-decoration-line: none;
 }
 
+/* 變數區 */
+:root {
+    --primary-1:#0152B9;
+    --primary-2:#F9D615;
+    --link:#555;
+    --text:#444;
+    --active:red;
+}
+
 /* 頁首區 */
-header {
+#topbar {
     padding: 15px 50px;
     display: flex;
     /* 控制子元素，父元素不變 */
     justify-content: space-between;
-    /* 主軸對其方式：貼其左右自動均分 */
+    /* 主軸對齊方式：貼齊左右自動均分 */
     align-items: center;
-    /* 次軸對其方式：貼其上下自動均分 */
+    /* 次軸對齊方式：貼齊上下自動均分 */
 }
 
-header .logo {
+#topbar .logo {
     width: 120px;
     /* svg圖檔，預設抓父元素的寬度 */
 }
 
 nav li {
     /* nav裡面的li */
-    float: left;
-    /* 浮動靠左(左排到右) */
+    float: left; /* 浮動靠左(左排到右) */
     margin-left: 15px;
 }
 
+/* 主要內容共用區 */
 main {
-    clear: both;
-    /* 清除浮動造成的排版錯誤 */
-    padding: 0 50px;
-    /* 主要內容區塊共用 */
+    clear: both; /* 清除浮動造成的排版錯誤 */
+    padding: 0 50px; /* 主要內容區塊共用 */
 }
 
 section {
     max-width: 1400px;
+    margin: 0 auto; /* 水平置中可用auto(自動均分間距)，但一定要搭配寬度 */
 }
 
+.title h2 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+.title h2 span {
+    color: var(--primary-1);
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.title h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+
+/* 餐廳 */
 #restaurant {
     display: flex;
 }
@@ -84,21 +112,53 @@ section {
 #restaurant div {
     flex: 1.2;
 }
+
 #restaurant p {
-    line-height: 1.3; /* 行高不給單位即為倍數 */
+    line-height: 1.3;
+    /* 行高不給單位即為倍數 */
 }
+
+/* 串接API */
 #api {
     display: flex;
-    justify-content: space-between;
 }
+
 #api div {
     flex: 1;
     margin: 20px;
 }
+
 #api iframe {
     width: 100%;
     height: 400px;
 }
+
+/* 最新消息 */
+.listbox {
+    display: flex;
+}
+
+.listbox article {
+    flex: 1;
+    margin: 0 15px;
+    background-color: var(--primary-2);
+}
+
+.listbox figure {
+    margin: 0;
+    height: 280px;
+}
+
+.listbox img {
+    /* 重置區已經設定過寬度100% */
+    height: 100%;
+    object-fit: cover; /* cover=>短編滿版，長邊剪裁；contain=>長邊滿版，短邊等比例縮放 */
+}
+
+.listbox .content{
+    padding: 20px;
+}
+
 footer {
     text-align: center;
     margin: 30px 0;

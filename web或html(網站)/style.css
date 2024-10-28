@@ -33,9 +33,10 @@ a:hover {
     text-decoration-style: wavy; */
     text-decoration: underline wavy;
 }
+
 a:active {
     color: red;
-    text-decoration-line:none;
+    text-decoration-line: none;
 }
 
 /* 頁首區 */
@@ -67,6 +68,37 @@ main {
     padding: 0 50px;
     /* 主要內容區塊共用 */
 }
+
 section {
     max-width: 1400px;
+}
+
+#restaurant {
+    display: flex;
+}
+
+#restaurant figure {
+    flex: 1;
+}
+
+#restaurant div {
+    flex: 1.2;
+}
+#restaurant p {
+    line-height: 1.3; /* 行高不給單位即為倍數 */
+}
+#api {
+    display: flex;
+    justify-content: space-between;
+}
+#api div {
+    flex: 1;
+    margin: 20px;
+}
+#api iframe {
+    width: 100%;
+    height: 400px;
+}
+footer {
+    text-align: center;
 }

@@ -4,8 +4,7 @@ body{
     color: var(--text);
 }
 body,h1,ul {
-    margin: 0;
-    /* 清除預設間距 */
+    margin: 0; /* 清除預設間距 */
 }
 
 ul {
@@ -15,10 +14,8 @@ ul {
 }
 
 img {
-    display: block;
-    /* 取消inline-block預設空白 */
-    width: 100%;
-    /* 自動抓父元素寬度 */
+    display: block; /* 取消inline-block預設空白 */
+    width: 100%; /* 自動抓父元素寬度 */
 }
 
 a {
@@ -39,24 +36,28 @@ a:active {
     text-decoration-line: none;
 }
 
+/* 變數區 */
+:root {
+    --primary-1:#0152B9;
+    --primary-2:#F9D615;
+    --link:#555;
+    --text:#444;
+    --active:red;
+}
+
 /* 頁首區 */
 #topbar {
     padding: 20px 100px;
-    display: flex;
-    /* 控制子元素，父元素不變 */
-    justify-content:left;
-    /* 主軸對齊方式：貼齊左右自動均分 */
-    align-items:center;
-    /* 次軸對齊方式：貼齊上下自動均分 */
+    display: flex; /* 控制子元素，父元素不變 */
+    justify-content:left; /* 主軸對齊方式：貼齊左右自動均分 */
+    align-items:center; /* 次軸對齊方式：貼齊上下自動均分 */
 }
 
 #topbar .logo {
-    width: 100px;
-    /* svg圖檔，預設抓父元素的寬度 */
+    width: 100px; /* svg圖檔，預設抓父元素的寬度 */
 }
 
-nav li {
-    /* nav裡面的li */
+nav li { /* nav裡面的li */
     float: left; /* 浮動靠左(左排到右) */
     margin-left: 30px;
 }
@@ -82,8 +83,7 @@ section {
 
 /* 列表區 */
 .listbox1 {
-    display: flex;
-    /* 控制子元素，父元素不變 */
+    display: flex; /* 控制子元素，父元素不變 */
 }
 
 .listbox2 {

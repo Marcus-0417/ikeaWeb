@@ -4,10 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./listbox.css">
 </head>
 <body>
-    <img src="https://www.mcdonalds.com/content/dam/sites/tw/menu/FullMenuLogo.png" alt="">
+    <!-- 頁首區(擋頭區) -->
+    <header id="topbar">
+        <!-- logo區 -->
+        <h1 class="logo">
+            <!-- 連回首頁 -->
+            <a href="listbox.html">
+                <!-- svg圖檔，預設抓父元素的寬度 -->
+                <img src="https://www.mcdonalds.com/content/dam/sites/tw/menu/FullMenuLogo.png" alt="">
+            </a>
+        </h1>
+        <!-- 導覽列 -->
+        <nav>
+            <ul><!-- ul的下層一定要搭配li -->
+                <li><a href="#">別具滋味</a></li>
+                <li><a href="#">企業永續</a></li>
+                <li><a href="#">數位便利</a></li>
+                <li><a href="#">現正推出</a></li>
+                <li><a href="#">尋找餐廳</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- 主要內容區 -->
+    <main>
+        <!-- 網站橫幅 -->
+        <div id="banner" title="網站橫幅">
+            <img src="https://www.mcdonalds.com/content/dam/sites/tw/carousel/2024/1023AnimeSeasonHerobannernew.jpg" alt="熱血動漫祭">
+        </div>
+        <section id="news">
+            <!-- 列表區 -->
+             <div class="listbox1">
+                <article class="paper"><figure><img src="https://s7d1.scene7.com/is/image/mcdonalds/what-hot-PC-1:1-2-full-bleed-tile-desktop?resmode=sharp2" alt=""></figure>
+                    <div class="content">
+                        <h2>現正推出</h2>
+                        <p>想了解麥當勞有哪些最新活動嗎？你不想錯過的美食、最即時的優惠內容... 馬上探索、馬上行動！*</p>
+                    </div>
+                </article>
 
-    <img src="https://www.mcdonalds.com/content/dam/sites/tw/carousel/2024/1023AnimeSeasonHerobannernew.jpg" alt="">
+                <article class="paper"><figure><img src="https://s7d1.scene7.com/is/image/mcdonalds/mcd-home-mds-pc-1:1-2-full-bleed-tile-desktop?resmode=sharp2" alt=""></figure>
+                    <div class="content">
+                        <h2>24hr歡樂送</h2>
+                        <p>不想出門？還是不方便出門？麥當勞歡樂送APP提供24小時點餐服務，讓你想吃就點，歡樂不間斷*</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="listbox2">
+                <article class="paper"><figure><img src="https://s7d1.scene7.com/is/image/mcdonalds/McCafe-banner:1-2-full-bleed-tile-desktop?resmode=sharp2" alt=""></figure>
+                    <div class="content">
+                        <h2>一杯McCafé 一段對話</h2>
+
+                        <p>一杯咖啡創造一段時光，在這段時間，您可以開啟一段對話，享受香醇，興許會是一段故事的新開始*</p>
+                    </div>
+                </article>
+
+                <article class="paper"><figure><img src="https://s7d1.scene7.com/is/image/mcdonalds/%E8%A6%AA%E5%AD%90%E6%99%82%E5%85%89KV_PC:1-2-full-bleed-tile-desktop?resmode=sharp2" alt=""></figure>
+                    <div class="content">
+                        <h2>親子時光</h2>
+
+                        <p>世界上還有什麼比和寶貝在一起更重要的呢？找時間帶他來麥當勞一起吃、一起玩，為寶貝上人生的第一堂課：快樂*</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="listbox3">
+                <article class="paper"><figure><img src="https://s7d1.scene7.com/is/image/mcdonalds/good-food-parents-child:1-2-full-bleed-tile-desktop?resmode=sharp2" alt=""></figure>
+                    <div class="content">
+                        <h2>安心品質</h2>
+
+                        <p>從食材挑選到衛生管理，從大事項到小細節，你的每一口都有我們最嚴格的把關認證，只為了讓你安心享受。</p>
+                    </div>
+                </article>
+
+                <article class="paper"><figure><img src="https://s7d1.scene7.com/is/image/mcdonalds/Home_Banner_Digital_PC:1-2-full-bleed-tile-desktop?resmode=sharp2" alt=""></figure>
+                    <div class="content">
+                        <h2>數位便利</h2>
+
+                        <p>總是為你想得更多，現在就利用多樣且便利的數位服務，來麥當勞找尋美味與樂趣吧！*</p>
+                    </div>
+                </article>
+             </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>© 2017 - 2024 McDonald's. All Rights Reserved.</small>
+    </footer>
+
 </body>
 </html>
